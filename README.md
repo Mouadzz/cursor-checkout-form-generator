@@ -1,6 +1,6 @@
 # Cursor Checkout Generator
 
-This extension generates credit cards and Moroccan addresses for applying to Cursor Pro free trials.
+This extension generates credit cards and random addresses for applying to Cursor Pro free trials.
 
 ## 🚀 Quick Setup
 

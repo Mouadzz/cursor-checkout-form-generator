@@ -1,4 +1,3 @@
-// Content script to inject widget only on Stripe checkout pages with "Try Cursor Pro"
 function checkAndCreateWidget() {
     if (!window.location.href.includes('checkout.stripe.com')) {
         return;
@@ -50,52 +49,10 @@ function checkAndCreateWidget() {
         button.disabled = true;
         
         try {
-            const proxyUrl = 'https://api.allorigins.win/get?url=';
-            const targetUrl = `https://www.bestrandoms.com/random-address-in-ma?quantity=10&t=${Date.now()}`;
-            const response = await fetch(proxyUrl + encodeURIComponent(targetUrl));
-            const data = await response.json();
-            
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(data.contents, 'text/html');
-            const contentDiv = doc.querySelector('.content');
-            
-            if (!contentDiv) {
-                button.innerHTML = originalText;
-                button.disabled = false;
-                return;
+            const result = await fetchRandomAddress();
+            if (result) {
+                fillAddressFields(result.name, result.address);
             }
-            
-            const addresses = [];
-            const liElements = contentDiv.querySelectorAll('li.col-sm-6');
-            
-            liElements.forEach(li => {
-                const addressData = {};
-                const spans = li.querySelectorAll('span');
-                
-                spans.forEach(span => {
-                    const text = span.textContent.trim();
-                    if (text.startsWith('Street:')) {
-                        addressData.street = text.replace('Street:', '').trim();
-                    } else if (text.startsWith('State/province/area:')) {
-                        addressData.state = text.replace('State/province/area:', '').trim();
-                    } else if (text.startsWith('Zip code:')) {
-                        addressData.zip_code = text.replace('Zip code:', '').trim();
-                    }
-                });
-                
-                if (Object.keys(addressData).length > 0) {
-                    addresses.push(addressData);
-                }
-            });
-            
-            if (addresses.length > 0) {
-                const randomAddress = addresses[Math.floor(Math.random() * addresses.length)];
-                const randomName = generateMoroccanName();
-                
-                fillAddressFields(randomName, randomAddress);
-            } else {
-            }
-            
         } catch (error) {
             console.error('Error fetching addresses:', error);
         } finally {
@@ -110,6 +67,7 @@ function checkAndCreateWidget() {
         const addressLine1 = document.getElementById('billingAddressLine1');
         const postalCode = document.getElementById('billingPostalCode');
         const city = document.getElementById('billingLocality');
+        const country = document.getElementById('billingCountry');
         
         // Simulate human-like input to avoid auto-clear detection
         setTimeout(() => {
@@ -147,6 +105,15 @@ function checkAndCreateWidget() {
                 city.dispatchEvent(new Event('change', { bubbles: true }));
             }
         }, 400);
+        
+        setTimeout(() => {
+            if (country) {
+                country.focus();
+                country.value = 'US';
+                country.dispatchEvent(new Event('input', { bubbles: true }));
+                country.dispatchEvent(new Event('change', { bubbles: true }));
+            }
+        }, 500);
     }
     
     document.getElementById('fill-card').onclick = () => {
