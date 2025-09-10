@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Card & Address Generator",
+  "version": "1.0",
+  "description": "Generate credit cards and addresses",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://checkout.stripe.com/*"],
+      "js": ["generator.js", "content.js"]
+    }
+  ]
+}
