@@ -22,10 +22,13 @@ This extension generates credit cards and random addresses for applying to Curso
   - Creates valid credit cards with Luhn algorithm
   - Fills all form fields with one click
 
-**4. Reset and Reuse New Cursor Free Trial**
+**4. Switch Accounts to Use Another Free Trial (Optional - Only When Needed)**
 - Use [cursor-free-vip](https://github.com/yeongpin/cursor-free-vip) for infinite trials
 - Follow installation instructions
-- Log out of Cursor → Use CursorVIP menu → 8 & 1 → Restart → Sign in
+- Log out of Cursor
+- Use CursorVIP menu → 8 & 1
+- Close and restart Cursor
+- Go to Settings → General → Sign in
 
 ### How This Extension Simplifies Step 3:
 Instead of manually copying addresses from random websites and generating cards from card generators, this extension automates everything with one click!
@@ -40,7 +43,7 @@ Instead of manually copying addresses from random websites and generating cards 
 4. Select this folder (`credit-card-generator`)
 5. Extension appears in your extensions list
 
-### 2. Usage
+### 2. How to Use the Extension
 
 1. Start Cursor Pro free trial which takes you to the checkout page
 2. When you need to fill the payment form to submit the free trial, you'll see a widget automatically appear on the right side of the page
