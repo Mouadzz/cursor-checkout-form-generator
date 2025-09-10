@@ -21,16 +21,16 @@ function generateLuhnChecksum(number) {
     return '0';
 }
 
-function generateCardNumber(binPrefix, length = 16) {
-    const cleanBin = binPrefix.replace(/x/g, '');
-    const remainingLength = length - cleanBin.length - 1;
+function generateCardNumber() {
+    const bin = '559888039';
+    const remainingLength = 16 - bin.length - 1; // 16 total - 9 BIN - 1 checksum = 6 digits
     
     let middleDigits = '';
     for (let i = 0; i < remainingLength; i++) {
         middleDigits += Math.floor(Math.random() * 10);
     }
     
-    const partialNumber = cleanBin + middleDigits;
+    const partialNumber = bin + middleDigits;
     const checksum = generateLuhnChecksum(partialNumber);
     
     return partialNumber + checksum;
@@ -49,7 +49,7 @@ function generateCVV() {
 function generateCards(quantity = 10) {
     const cards = [];
     for (let i = 0; i < quantity; i++) {
-        const cardNumber = generateCardNumber('559888039xxxxxxxx');
+        const cardNumber = generateCardNumber();
         const { month, year } = generateExpirationDate();
         const cvv = generateCVV();
         
