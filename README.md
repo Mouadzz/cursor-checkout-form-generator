@@ -1,4 +1,4 @@
-# Chrome Extension: Card & Address Generator
+# Cursor Checkout Generator
 
 This extension generates credit cards and Moroccan addresses for applying to Cursor Pro free trials.
 

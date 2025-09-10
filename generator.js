@@ -1,4 +1,3 @@
-// Shared functions for both popup and content scripts
 function generateLuhnChecksum(number) {
     function luhnChecksum(cardNum) {
         const digits = cardNum.toString().split('').map(Number);

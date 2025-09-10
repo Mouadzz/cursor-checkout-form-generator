@@ -1,16 +1,13 @@
 // Content script to inject widget only on Stripe checkout pages with "Try Cursor Pro"
 function checkAndCreateWidget() {
-    // Check if we're on Stripe checkout
     if (!window.location.href.includes('checkout.stripe.com')) {
         return;
     }
     
-    // Check if page contains "Try Cursor Pro"
     if (!document.body.textContent.includes('Try Cursor Pro')) {
         return;
     }
     
-    console.log('Stripe checkout page with "Try Cursor Pro" detected!');
     
     const widget = document.createElement('div');
     widget.id = 'card-generator-widget';
@@ -63,7 +60,6 @@ function checkAndCreateWidget() {
             const contentDiv = doc.querySelector('.content');
             
             if (!contentDiv) {
-                console.log('No content found');
                 button.innerHTML = originalText;
                 button.disabled = false;
                 return;
@@ -97,9 +93,7 @@ function checkAndCreateWidget() {
                 const randomName = generateMoroccanName();
                 
                 fillAddressFields(randomName, randomAddress);
-                console.log('Address filled:', { name: randomName, address: randomAddress });
             } else {
-                console.log('No addresses parsed');
             }
             
         } catch (error) {
@@ -166,7 +160,6 @@ function checkAndCreateWidget() {
                 const cards = generateCards(10);
                 const randomCard = cards[Math.floor(Math.random() * cards.length)];
                 fillCardFields(randomCard);
-                console.log('Card filled:', randomCard);
             } finally {
                 button.innerHTML = originalText;
                 button.disabled = false;
