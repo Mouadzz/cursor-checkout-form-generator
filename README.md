@@ -50,4 +50,5 @@ Instead of manually copying addresses from random websites and generating cards 
 3. Click "Generate Address" - fills name, address, postal code, and city fields
 4. Click "Generate Card" - fills card number, expiry date, and CVV fields
 5. Complete checkout with all fields filled for the 14-day trial
+6. If credit card is not valid or not accepted, just click "Generate Card" again and try with a new card
 
