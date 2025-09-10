@@ -52,3 +52,7 @@ Instead of manually copying addresses from random websites and generating cards 
 5. Complete checkout with all fields filled for the 14-day trial
 6. If credit card is not valid or not accepted, just click "Generate Card" again and try with a new card
 
+## Important
+
+**After using cursor-free-vip, avoid updating Cursor to newer versions.** Stay on the same version to maintain compatibility and prevent potential issues with the VIP functionality.
+
