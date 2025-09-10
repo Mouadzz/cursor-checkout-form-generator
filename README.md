@@ -37,11 +37,12 @@ Instead of manually copying addresses from random websites and generating cards 
 
 ### 1. Install Extension
 
-1. Open Chrome and go to `chrome://extensions/`
-2. Enable **"Developer mode"** (toggle in top-right corner)
-3. Click **"Load unpacked"** (usually in top-left corner)
-4. Select this folder (`credit-card-generator`)
-5. Extension appears in your extensions list
+1. Clone this repository: `git clone <repository-url>`
+2. Open Chrome and go to `chrome://extensions/`
+3. Enable **"Developer mode"** (toggle in top-right corner)
+4. Click **"Load unpacked"** (usually in top-left corner)
+5. Select this folder (`credit-card-generator`)
+6. Extension appears in your extensions list
 
 ### 2. How to Use the Extension
 
