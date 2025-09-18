@@ -23,7 +23,7 @@ This extension generates credit cards and random addresses for applying to Curso
   - Enable **"Developer mode"** (toggle in top-right or top-left corner)
   - Click **"Load unpacked"** (usually in top-left corner)
   - Select the cloned folder
-  - If you go to the checkout and refresh, you'll see a popup on the right to generate addresses and cards
+  - If you go to the Stripe payment page and refresh, you'll see a popup on the right to generate addresses and cards
 - **The extension automatically:**
   - Generates realistic addresses
   - Creates valid credit cards with Luhn algorithm
