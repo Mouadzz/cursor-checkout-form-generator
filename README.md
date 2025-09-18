@@ -9,17 +9,23 @@ This extension generates credit cards and random addresses for applying to Curso
 **1. Create Account**
 - Go to https://cursor.com/
 - Click "Sign up"
-- Complete authentication
+- You can use [temp-mail.org](https://temp-mail.org/en/view/68cc31b0174a7400b80b23c2) for infinite disposable email addresses
 
 **2. Activate Pro Trial**
 - Click "Claim your Pro Trial"
 - You'll be redirected to Stripe payment page
 
-**3. Payment Setup (This is where this extension helps!)**
+**3. Payment Setup**
 - Select "Credit Card" as payment method
-- **Install this extension first** - see Quick Setup section below
-- **Instead of manually getting addresses and cards, this extension does it automatically:**
-  - Generates realistic US addresses
+- Install this extension:
+  1. Clone this repository: `git clone https://github.com/Mouadzz/cursor-checkout-form-generator.git`
+  2. Open Chrome or Brave and go to `chrome://extensions/` (or `brave://extensions/`)
+  3. Enable **"Developer mode"** (toggle in top-right or top-left corner)
+  4. Click **"Load unpacked"** (usually in top-left corner)
+  5. Select the cloned folder
+  6. If you go to the checkout and refresh, you'll see a popup on the right to generate addresses and cards
+- **The extension automatically:**
+  - Generates realistic addresses
   - Creates valid credit cards with Luhn algorithm
   - Fills all form fields with one click
 
@@ -31,29 +37,6 @@ This extension generates credit cards and random addresses for applying to Curso
 - Close and restart Cursor
 - Go to Settings → General → Sign in
 
-### How This Extension Simplifies Step 3:
-Instead of manually copying addresses from random websites and generating cards from card generators, this extension automates everything with one click!
-
-## 🚀 Quick Setup
-
-### 1. Install Extension
-
-
-1. Clone this repository: `git clone https://github.com/Mouadzz/cursor-checkout-form-generator.git`
-2. Open Chrome or Brave and go to `chrome://extensions/` (or `brave://extensions/`)
-3. Enable **"Developer mode"** (toggle in top-right corner)
-4. Click **"Load unpacked"** (usually in top-left corner)
-5. Select this folder (`credit-card-generator`)
-6. Extension appears in your extensions list
-
-### 2. How to Use the Extension
-
-1. Start Cursor Pro free trial which takes you to the checkout page
-2. When you need to fill the payment form to submit the free trial, you'll see a widget automatically appear on the right side of the page
-3. Click "Generate Address" - fills name, address, postal code, and city fields
-4. Click "Generate Card" - fills card number, expiry date, and CVV fields
-5. Complete checkout with all fields filled for the 14-day trial
-6. If credit card is not valid or not accepted, just click "Generate Card" again and try with a new card
 
 ## Important
 
