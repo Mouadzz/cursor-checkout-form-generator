@@ -18,12 +18,12 @@ This extension generates credit cards and random addresses for applying to Curso
 **3. Payment Setup**
 - Select "Credit Card" as payment method
 - Install this extension:
-  1. Clone this repository: `git clone https://github.com/Mouadzz/cursor-checkout-form-generator.git`
-  2. Open Chrome or Brave and go to `chrome://extensions/` (or `brave://extensions/`)
-  3. Enable **"Developer mode"** (toggle in top-right or top-left corner)
-  4. Click **"Load unpacked"** (usually in top-left corner)
-  5. Select the cloned folder
-  6. If you go to the checkout and refresh, you'll see a popup on the right to generate addresses and cards
+  - Clone this repository: `git clone https://github.com/Mouadzz/cursor-checkout-form-generator.git`
+  - Open Chrome or Brave and go to `chrome://extensions/` (or `brave://extensions/`)
+  - Enable **"Developer mode"** (toggle in top-right or top-left corner)
+  - Click **"Load unpacked"** (usually in top-left corner)
+  - Select the cloned folder
+  - If you go to the checkout and refresh, you'll see a popup on the right to generate addresses and cards
 - **The extension automatically:**
   - Generates realistic addresses
   - Creates valid credit cards with Luhn algorithm
