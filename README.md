@@ -32,13 +32,13 @@ This extension generates credit cards and random addresses for applying to Curso
 **4. Switch Accounts to Use Another Free Trial (Optional - Only When Needed)**
 - **When to use:** When your trial ends or the token limit of a model ends and you want to use another account
 - **Steps:**
-  1. Do step 1 and 2 again (create new account with temp-mail)
-  2. Install [cursor-free-vip](https://github.com/yeongpin/cursor-free-vip) and follow installation instructions
-  3. Log out of Cursor
-  4. Use CursorVIP menu → 8 & 1
-  5. Close and restart Cursor
-  6. Go to Settings → General → Sign in
-  7. Login with the new account again and voila!
+  - Do step 1 and 2 again (create new account with temp-mail)
+  - Install [cursor-free-vip](https://github.com/yeongpin/cursor-free-vip) and follow installation instructions
+  - Log out of Cursor
+  - Use CursorVIP menu → 8 & 1
+  - Close and restart Cursor
+  - Go to Settings → General → Sign in
+  - Login with the new account again and voila!
 
 
 ## Important
